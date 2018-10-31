@@ -1,3 +1,7 @@
+#Florian Frühwirth
+#01.11.2018
+#[description goes here]
+
 import math
 
 subject = "NIL"
