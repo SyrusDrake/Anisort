@@ -1,6 +1,6 @@
 # Anisort README
 
-**Version 1.0.0** - [Change log](CHANGELOG.md) s
+**Version 1.0.0** - [Change log](CHANGELOG.md)
 
 Anisort is a simple sorting program to create a list of item sorted by the user's preference. Originally, it was designed to create a sorted to-watch list of anime but you could probably use it for different items as well. Can't imagine what else you might want to sort besides anime.
 
