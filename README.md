@@ -20,13 +20,13 @@ Essentially, the current item being compared (the subject) is compared to an ite
 
 ---
 ## Stuff I Want To Add
--Currently, one comparand will appear twice for every subject. This doesn't really create any problems but is inelegant and needs to be fixed.
--Have the program display a customized warning if the necessary input files are missing instead of just crashing.
--Let the user pick an input file instead of having a hard-coded file name.
--Let the user pick name and location of the output file.
--Create some sort of "title screen"
--Maybe create a GUI
--Either change the buttons used for choosing items to arrow keys or create an option menu where the user gets to choose what buttons to use.
+- Currently, one comparand will appear twice for every subject. This doesn't really create any problems but is inelegant and needs to be fixed.
+- Have the program display a customized warning if the necessary input files are missing instead of just crashing.
+- Let the user pick an input file instead of having a hard-coded file name.
+- Let the user pick name and location of the output file.
+- Create some sort of "title screen"
+- Maybe create a GUI
+- Either change the buttons used for choosing items to arrow keys or create an option menu where the user gets to choose what buttons to use.
 
 ## License and Copyright
 
