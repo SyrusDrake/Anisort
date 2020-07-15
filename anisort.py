@@ -13,6 +13,7 @@ input_array = input_file.read().splitlines()
 working_array = []                              # working_array is empty to start out
 comparand = 0                                   # comparand is the item in the existing list that the subject is being compared to
 place = 0                                       # The place in the existing list where the new item will be placed
+steps = 0
 
 # </cf>
 
@@ -37,20 +38,23 @@ else:
         load_file = open("anime_load.txt")
         sorted_array = load_file.read().splitlines()    # Creates an array from the input file
 
-    while True:
+    while True:  # This is repeated with every new item to be sorted
         subject = input_array.pop(0)    # The first item of the input array becomes the subject
         working_array = sorted_array
 
         save_file(sorted_array)
 
-        while True:
+        while True:  # This is repeated until the place for the item is found
             comparand = math.floor((len(working_array) / 2))  # The item in the middle of the existing list becomes the current comparand
+            print(comparand)
 
             if len(working_array) > 0:  # Makes sure there are items left
+                print(working_array)
                 print("Do you prefer", subject, "(1) or", working_array[comparand], "(2)")
                 choice = input("Choose one: ")
 
                 if choice == "1":
+                    steps += 1
                     if len(working_array) > 1:
                         working_array = working_array[0:comparand]  # If the subject is preffered, the half of the list ABOVE the comparand is "selected" for further comparison
 
@@ -60,9 +64,10 @@ else:
                         break
 
                 if choice == "2":
-                    if len(working_array) > 1:
-                        working_array = working_array[comparand:len(sorted_array)]  # If comparand is preffered, the half of the list BELOW the comparand is "selected" for further comparison
-
+                    steps += 1
+                    if len(working_array) > 2:
+                        working_array = working_array[comparand:len(sorted_array)]  # If comparand is preferred, the half of the list BELOW the comparand is "selected" for further comparison
+                        print(working_array)
                     else:   # If only the starting item is present in the list
                         place = sorted_array.index(working_array[comparand]) + 1
                         sorted_array.insert(place, subject)     # The subject is placed behind the comparand
@@ -70,6 +75,7 @@ else:
 
         if len(input_array) == 0:   # If all items have been checked
             print("Sorted list is", sorted_array)   # The sorted array is output
+            print(f'{steps} steps')
             choice = input("Do you want to save the list to a file? y/n")
             if choice == "y":
                 save_file(sorted_array)
