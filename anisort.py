@@ -1,7 +1,13 @@
+<<<<<<< HEAD
+#Florian Fuehwirth
+#01.11.2018
+#[description goes here]
+=======
 # Florian Frühwirth
 # 21.07.2019
 # A program to load a list of items, sort it by comparing the user's preference of two items at a time and, if desired, save the sorted list.
 # v1.0.1
+>>>>>>> 7e432ff7b153456a53921e8ab15562b0305e763e
 
 import math
 
